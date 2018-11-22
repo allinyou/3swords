@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/onepage.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/rem.js"></script>
+    <title>笑笑 · 生日快乐</title>
+</head>
+<body>
+    <div class="home">
+        <div class="page-1 page">
+            <div class="filter"></div>
+            <span v-animate="animated bounceInDown">笑</span>
+            <img class="img-1" src="./assets/20180406153029_636f1a3665c9e1c894d8fe343fe9a8e9_21.gif" alt="" v-animate="animated swing">   
+            <img class="img-1" src="./assets/20180406153029_636f1a3665c9e1c894d8fe343fe9a8e9_44.gif" alt="" v-animate="animated bounceIn">  
+            <span v-animate="animated bounceInUp">农历2018年10月18日</span> 
+        </div>
+        <div class="page-2 page">
+            <div class="filter"></div>
+            <img class="img-1" src="./assets/3.jpg" alt="" v-animate="animated bounceInLeft">     
+            <img class="img-2" src="./assets/1.jpg" alt="" v-animate="animated bounceInRight">
+            <img class="img-3" src="./assets/2.jpg" alt="" v-animate="animated bounceInLeft">
+        </div>
+        <div class="page-3 page">
+            <div class="filter"></div>
+            <img class="img-1" src="./assets/486588782386983111.jpg" alt="" v-animate="animated zoomIn"> 
+        </div>
+        <div class="page-4 page">
+            <div class="filter"></div>
+            <img class="img-1" src="./assets/362458738353902347.jpg" alt="" v-animate="animated rollIn"> 
+        </div>
+        <div class="page-5 page">
+            <div class="filter"></div>
+            <img class="img-1" src="./assets/375726187900958593.jpg" alt="" v-animate="animated lightSpeedIn"> 
+        </div>
+        <div class="page-6 page">
+            <div class="filter"></div>
+            <img class="img-1" src="./assets/1a1fde891ab21dbc1985c60c3df90e1.jpg" alt="" v-animate="animated flip"> 
+        </div>
+        <div class="page-7 page">
+            <div class="filter"></div>
+            <img class="img-1" src="./assets/b3648329a6b85c493414cc0a855b23a.jpg" alt="" v-animate="animated rotateInDownRight"> 
+        </div>
+        <div class="page-8 page">
+            <div class="filter"></div>
+            <img class="img-1" src="./assets/8.jpg" alt="" v-animate="animated fadeInUp"> 
+        </div>
+        <div class="page-9 page">
+            <div class="filter"></div>
+            <img class="img-1" src="./assets/9.jpg" alt="" v-animate="animated flipInX"> 
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.onepage.js"></script>
+<script>
+$('.home').onepage_scroll({
+    sectionContainer: '.page',
+    updateURL:true,
+    loop:false,
+    pagination: false,
+    beforeMove:function(index) {}
+})
+</script>
