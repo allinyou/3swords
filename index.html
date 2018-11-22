@@ -6,110 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/rem.js"></script>
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <title>笑笑 · 生日快乐</title>
 </head>
 <body>
-    <div id="fullpage">
-        <div class="page-1 page">
-            <div class="filter"></div>
-            <span v-animate="animated bounceInDown">笑</span>
-            <img class="img-1" src="./assets/20180406153029_636f1a3665c9e1c894d8fe343fe9a8e9_21.gif" alt="" v-animate="animated swing">   
-            <img class="img-1" src="./assets/20180406153029_636f1a3665c9e1c894d8fe343fe9a8e9_44.gif" alt="" v-animate="animated bounceIn">  
-            <span v-animate="animated bounceInUp">农历2018年10月18日</span> 
-        </div>
-        <div class="page-2 page">
-            <div class="filter"></div>
-            <img class="img-1" src="./assets/3.jpg" alt="" v-animate="animated bounceInLeft">     
-            <img class="img-2" src="./assets/1.jpg" alt="" v-animate="animated bounceInRight">
-            <img class="img-3" src="./assets/2.jpg" alt="" v-animate="animated bounceInLeft">
-        </div>
-        <div class="page-3 page">
-            <div class="filter"></div>
-            <img class="img-1" src="./assets/486588782386983111.jpg" alt="" v-animate="animated zoomIn"> 
-        </div>
-        <div class="page-4 page">
-            <div class="filter"></div>
-            <img class="img-1" src="./assets/362458738353902347.jpg" alt="" v-animate="animated rollIn"> 
-        </div>
-        <div class="page-5 page">
-            <div class="filter"></div>
-            <img class="img-1" src="./assets/375726187900958593.jpg" alt="" v-animate="animated lightSpeedIn"> 
-        </div>
-        <div class="page-6 page">
-            <div class="filter"></div>
-            <img class="img-1" src="./assets/1a1fde891ab21dbc1985c60c3df90e1.jpg" alt="" v-animate="animated flip"> 
-        </div>
-        <div class="page-7 page">
-            <div class="filter"></div>
-            <img class="img-1" src="./assets/b3648329a6b85c493414cc0a855b23a.jpg" alt="" v-animate="animated rotateInDownRight"> 
-        </div>
-        <div class="page-8 page">
-            <div class="filter"></div>
-            <img class="img-1" src="./assets/8.jpg" alt="" v-animate="animated fadeInUp"> 
-        </div>
-        <div class="page-9 page">
-            <div class="filter"></div>
-            <img class="img-1" src="./assets/9.jpg" alt="" v-animate="animated flipInX"> 
+    <div class="home">
+        <div class="swiper-wrapper">
+            <div class="page-1 page swiper-slide">
+                <div class="filter"></div>
+                <span v-animate="animated bounceInDown">笑</span>
+                <img class="img-1" src="./assets/20180406153029_636f1a3665c9e1c894d8fe343fe9a8e9_21.gif" alt="" v-animate="animated swing">   
+                <img class="img-1" src="./assets/20180406153029_636f1a3665c9e1c894d8fe343fe9a8e9_44.gif" alt="" v-animate="animated bounceIn">  
+                <span v-animate="animated bounceInUp">农历2018年10月18日</span> 
+            </div>
+            <div class="page-2 page swiper-slide">
+                <div class="filter"></div>
+                <img class="img-1" src="./assets/3.jpg" alt="" v-animate="animated bounceInLeft">     
+                <img class="img-2" src="./assets/1.jpg" alt="" v-animate="animated bounceInRight">
+                <img class="img-3" src="./assets/2.jpg" alt="" v-animate="animated bounceInLeft">
+            </div>
+            <div class="page-3 page swiper-slide">
+                <div class="filter"></div>
+                <img class="img-1" src="./assets/486588782386983111.jpg" alt="" v-animate="animated zoomIn"> 
+            </div>
+            <div class="page-4 page swiper-slide">
+                <div class="filter"></div>
+                <img class="img-1" src="./assets/362458738353902347.jpg" alt="" v-animate="animated rollIn"> 
+            </div>
+            <div class="page-5 page swiper-slide">
+                <div class="filter"></div>
+                <img class="img-1" src="./assets/375726187900958593.jpg" alt="" v-animate="animated lightSpeedIn"> 
+            </div>
+            <div class="page-6 page swiper-slide">
+                <div class="filter"></div>
+                <img class="img-1" src="./assets/1a1fde891ab21dbc1985c60c3df90e1.jpg" alt="" v-animate="animated flip"> 
+            </div>
+            <div class="page-7 page swiper-slide">
+                <div class="filter"></div>
+                <img class="img-1" src="./assets/b3648329a6b85c493414cc0a855b23a.jpg" alt="" v-animate="animated rotateInDownRight"> 
+            </div>
+            <div class="page-8 page swiper-slide">
+                <div class="filter"></div>
+                <img class="img-1" src="./assets/8.jpg" alt="" v-animate="animated fadeInUp"> 
+            </div>
+            <div class="page-9 page swiper-slide">
+                <div class="filter"></div>
+                <img class="img-1" src="./assets/9.jpg" alt="" v-animate="animated flipInX"> 
+            </div>
         </div>
     </div>
 </body>
 </html>
 <script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/easings.min.js"></script>
-<script src="js/fullpage.min.js"></script>
+<script src="js/swiper.min.js"></script>
 <script>
-var myFullpage = new fullpage('#fullpage', {
-    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-	//滚动
-    css3: true,
-    lockAnchors: false,
-	scrollingSpeed: 700,
-	autoScrolling: true,
-	fitToSection: true,
-	fitToSectionDelay: 500,
-	scrollBar: false,
-	easing: 'easeInOutCubic',
-	easingcss3: 'ease',
-	dragAndMove: 'vertical',
-	offsetSections: true,
-	resetSliders: false,
-	fadingEffect: false,
-	scrollOverflow: false,
-	scrollOverflowReset: false,
-	scrollOverflowOptions: null,
-	touchSensitivity: 15,
-	normalScrollElementTouchThreshold: 5,
-	bigSectionsDestination: null,
-
-	//可访问
-	keyboardScrolling: false,
-	animateAnchor: false,
-	recordHistory: false,
-
-	//设计
-	controlArrows: true,
-	verticalCentered: true,
-	responsiveWidth: 0,
-	responsiveHeight: 0,
-	responsiveSlides: false,
-	parallax: false,
-	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-
-	//自定义选择器
-	sectionSelector: '.page',
-
-	lazyLoading: true,
-
-	//事件
-	onLeave: function(origin, destination, direction){},
-	afterLoad: function(origin, destination, direction){},
-	afterRender: function(){},
-	afterResize: function(width, height){},
-	afterResponsive: function(isResponsive){},
-	afterSlideLoad: function(section, origin, destination, direction){},
-	onSlideLeave: function(section, origin, destination, direction){}
-});
+var mySwiper = new Swiper('.home', {
+    autoplay: false,//可选选项，自动滑动
+    direction : 'vertical'
+})
 </script>
