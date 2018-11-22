@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/rem.js"></script>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/onepage.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <script src="js/rem.js"></script>
     <title>笑笑 · 生日快乐</title>
 </head>
 <body>
-    <div class="home">
+    <div id="fullpage">
         <div class="page-1 page">
             <div class="filter"></div>
             <span v-animate="animated bounceInDown">笑</span>
@@ -58,13 +58,58 @@
 </body>
 </html>
 <script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/jquery.onepage.js"></script>
+<script src="js/easings.min.js"></script>
+<script src="js/fullpage.min.js"></script>
 <script>
-$('.home').onepage_scroll({
-    sectionContainer: '.page',
-    updateURL:true,
-    loop:false,
-    pagination: false,
-    beforeMove:function(index) {}
-})
+var myFullpage = new fullpage('#fullpage', {
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+	//滚动
+    css3: true,
+    lockAnchors: false,
+	scrollingSpeed: 700,
+	autoScrolling: true,
+	fitToSection: true,
+	fitToSectionDelay: 500,
+	scrollBar: false,
+	easing: 'easeInOutCubic',
+	easingcss3: 'ease',
+	dragAndMove: 'vertical',
+	offsetSections: true,
+	resetSliders: false,
+	fadingEffect: false,
+	scrollOverflow: false,
+	scrollOverflowReset: false,
+	scrollOverflowOptions: null,
+	touchSensitivity: 15,
+	normalScrollElementTouchThreshold: 5,
+	bigSectionsDestination: null,
+
+	//可访问
+	keyboardScrolling: false,
+	animateAnchor: false,
+	recordHistory: false,
+
+	//设计
+	controlArrows: true,
+	verticalCentered: true,
+	responsiveWidth: 0,
+	responsiveHeight: 0,
+	responsiveSlides: false,
+	parallax: false,
+	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+	//自定义选择器
+	sectionSelector: '.page',
+
+	lazyLoading: true,
+
+	//事件
+	onLeave: function(origin, destination, direction){},
+	afterLoad: function(origin, destination, direction){},
+	afterRender: function(){},
+	afterResize: function(width, height){},
+	afterResponsive: function(isResponsive){},
+	afterSlideLoad: function(section, origin, destination, direction){},
+	onSlideLeave: function(section, origin, destination, direction){}
+});
 </script>
