@@ -11,10 +11,22 @@
     <link rel="stylesheet" href="css/index.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
     <title>笑笑 · 生日快乐</title>
 </head>
 
 <body>
+    <div class="progress animated"></div>
+    <script>
+        var progress = 0;
+        (function changeProgress() {
+            if (progress<=25) {
+                progress += 1;
+                $('.progress').html(progress + '%');
+                requestAnimationFrame(changeProgress);
+            }
+        })()
+    </script>
     <div class="home">
         <div class="swiper-wrapper">
             <div class="page-1 page swiper-slide">
@@ -65,10 +77,19 @@
     <div class="number fadeInRight animated">1/9</div>
     <canvas id="canvas1" height="520" width="300"></canvas>
     <canvas id="canvas2" height="520" width="300"></canvas>
+    
 </body>
 
 </html>
-<script src="js/jquery-1.11.2.min.js"></script>
+<script>
+(function changeProgress() {
+        if (progress<=50) {
+            progress += 1;
+            $('.progress').html(progress + '%');
+            requestAnimationFrame(changeProgress);
+        }
+    })()
+</script>
 <script src="js/swiper.animate.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script>
@@ -91,8 +112,13 @@
     audio.src = 'assets/audio/C400004FjJo32TISsY.mp3';   // songs[index]
     audio.autoplay = true;
     audio.loop = 'loop';
-
-    
+    (function changeProgress() {
+            if (progress<=75) {
+                progress += 1;
+                $('.progress').html(progress + '%');
+                requestAnimationFrame(changeProgress);
+            }
+        })()
     var colors = ['red', 'orange', 'cyan']; // , 'purple' 'blue', 'green', 
     var randomIndex1 = Math.floor(Math.random() * 3);
     var randomIndex2 = Math.floor(Math.random() * 3);
@@ -143,6 +169,17 @@
             requestAnimationFrame(drawFreqs);
         })();
     }
-    drawFreq();
-
+    drawFreq(); 
+    (function changeProgress() {
+        if (progress>=100) {
+            setTimeout(() => {
+                $('.progress').addClass('zoomOut');
+            },200)
+        }
+        if (progress<=99) {
+            progress += 1;
+            $('.progress').html(progress + '%');
+            requestAnimationFrame(changeProgress);
+        }
+    })()
 </script>
