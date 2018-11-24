@@ -85,9 +85,16 @@
 
     //音频
     var audio = new Audio();
-    audio.src = 'assets/audio/C400004FjJo32TISsY.mp3';   // songs[index]
+    var index = 0;
+    var songs = ['assets/audio/happy.mp3','assets/audio/C400004FjJo32TISsY.mp3','assets/audio/lost.mp3'];
+    audio.src = songs[0];   // songs[index]
     audio.autoplay = true;
-    audio.loop = 'loop';
+
+    audio.addEventListener('ended', function() {
+        index += 1;
+        audio.src = songs[(index % 3)];
+    })
+
     var colors = ['red', 'orange', 'cyan']; // , 'purple' 'blue', 'green', 
     var randomIndex1 = Math.floor(Math.random() * 3);
     var randomIndex2 = Math.floor(Math.random() * 3);
