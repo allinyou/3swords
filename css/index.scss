@@ -96,27 +96,14 @@
 // 第1页---------------------------------------------------------------------------------------------------------------------------
 .page-1{
   display: flex!important;
-  @extend .column-align-center;
-  span{
-     color:#ff00ff;
-     font-size:100px;
-     margin-top:20px;
-  }
-  span:last-of-type{
-    font-size:0.32rem;
-    margin-top:0;
-  }
+  @extend .column-center;
   .filter{
-    background-image: url(../assets/20180406153029_636f1a3665c9e1c894d8fe343fe9a8e9_21.gif);
+    background-image: url(https://6d61-magic-d13079-1255581239.tcb.qcloud.la/330.jpg?sign=832950a9b929393ce05804a113a70b0f&t=1542688956);
     background-repeat: repeat;
   }
   img{
     margin:20px auto 10px;
     display: block;
-    width: 100%;
-  }
-  img:last-of-type{
-    margin-top:10px;
     width: 80%;
   }
 }

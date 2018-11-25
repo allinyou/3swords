@@ -4,26 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <meta http-equiv="
-        X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/rem.js"></script>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
-    <title>笑笑 · 生日快乐</title>
+    <title>时光未央 · 岁月静好</title>
 </head>
 <body>
     <div class="home">
         <div class="swiper-wrapper">
             <div class="page-1 page swiper-slide">
                 <div class="filter"></div>
-                <span swiper-animate-effect="bounceInDown" class="ani">笑</span>
-                <img class="ani" src="./assets/20180406153029_636f1a3665c9e1c894d8fe343fe9a8e9_21.gif" alt=""
-                    swiper-animate-effect="swing">
-                <img class="ani" src="./assets/20180406153029_636f1a3665c9e1c894d8fe343fe9a8e9_44.gif" alt=""
-                    swiper-animate-effect="bounceIn">
-                <span swiper-animate-effect="bounceInUp" class="ani">农历2018年10月18日</span>
+                <img class="ani" src="./assets/20181125220455.jpg" alt=""
+                    swiper-animate-effect="flipInY">
+                <img class="ani" src="./assets/20181125220504.jpg" alt=""
+                    swiper-animate-effect="flipInY">
+                <img class="ani" src="./assets/20181125220513.jpg" alt=""
+                    swiper-animate-effect="flipInY">
             </div>
             <div class="page-2 page swiper-slide">
                 <div class="filter"></div>
@@ -83,13 +82,13 @@
     //音频
     var audio = new Audio();
     var index = 0;
-    var songs = ['assets/audio/happy.mp3','assets/audio/C400004FjJo32TISsY.mp3','assets/audio/lost.mp3'];
+    var songs = ['assets/audio/C400004FjJo32TISsY.mp3','assets/audio/lost.mp3'];
     audio.src = songs[0];   // songs[index]
     audio.autoplay = true;
 
     audio.addEventListener('ended', function() {
         index += 1;
-        audio.src = songs[(index % 3)];
+        audio.src = songs[(index % 2)];
     })
 
     var colors = ['red', 'orange', 'cyan']; // , 'purple' 'blue', 'green', 
