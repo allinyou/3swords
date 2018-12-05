@@ -18,10 +18,11 @@
         <div class="swiper-wrapper">
             <div class="page-1 page swiper-slide">
                 <div class="filter"></div>
-                <span class="bir-time ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.5s">农历2018年10月30日</span>
+                <span class="bir-time ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.5s">丽 · 农历2018年10月30日</span>
                 <img class="ani" src="./assets/13.jpg" alt="" swiper-animate-effect="bounceInDown">
                 <img class="ani" src="./assets/15.gif" alt="" swiper-animate-effect="swing">
-                <span class="bir-time ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.5s">农历2018年11月04日</span>
+                <img class="ani" src="./assets/17.jpg" alt="" swiper-animate-effect="bounceInUp">
+                <span class="bir-time ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.5s">华 · 农历2018年11月04日</span>
             </div>
             <div class="page-2 page swiper-slide">
                 <div class="filter"></div>
@@ -57,11 +58,11 @@
             </div>
             <div class="page-9 page swiper-slide">
                 <div class="filter"></div>
-                <img class="ani" src="./assets/16.jpg" alt="" swiper-animate-effect="flipInX">
+                <img class="ani" src="./assets/16.jpg" alt="" swiper-animate-effect="flipInY">
             </div>
         </div>
     </div>
-    <div class="number fadeInRight animated">1/8</div>
+    <div class="number fadeInRight animated">1/9</div>
     <canvas id="canvas1" height="520" width="300"></canvas>
     <canvas id="canvas2" height="520" width="300"></canvas>
     <!-- <canvas id="sakura"></canvas> -->
@@ -81,7 +82,7 @@
         },
         onSlideChangeEnd: function (swiper) {
             swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-            numshow.innerHTML = (swiper.activeIndex + 1) * 1 + '/8';
+            numshow.innerHTML = (swiper.activeIndex + 1) * 1 + '/9';
         }
     })
 
@@ -90,8 +91,13 @@
     var index = 0;
     var songs = ['assets/audio/happy.mp3','assets/audio/C400001N8e5Q4Gjxda.mp3', 'assets/audio/lost.mp3'];
     audio.src = songs[0];   // songs[index]
-    //audio.autoplay = true;
-
+    audio.autoplay = true;
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+    }, false);
+    document.addEventListener('YixinJSBridgeReady', function() {
+        audio.play();
+    }, false);
     audio.addEventListener('ended', function () {
         index += 1;
         audio.src = songs[(index % 2)];

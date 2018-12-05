@@ -117,8 +117,13 @@
 
 .page-1 span {
   color: #fa58bf;
-  font-size: 28px;
+  font-size: 26px;
   margin-bottom: 10px;
+}
+
+.page-1 img:nth-of-type(2) {
+  margin-top: -30px;
+  margin-bottom: -20px;
 }
 
 .page-1 span:last-of-type {
