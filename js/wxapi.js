@@ -26,7 +26,7 @@ WeixinApi.ready(function(Api){
         "desc":'华 & 丽',
         "title":"生日快乐"
     };
- 
+    alert(111);
     // 分享的回调
     var wxCallbacks = {
         // 分享操作开始之前
