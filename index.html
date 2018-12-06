@@ -94,7 +94,7 @@
     //音频
     var audio = new Audio();
     var index = 0;
-    var songs = ['assets/audio/happy.mp3','assets/audio/C400001N8e5Q4Gjxda.mp3', 'assets/audio/lost.mp3'];
+    var songs = ['assets/audio/happy.mp3','assets/audio/C400001N8e5Q4Gjxda.mp3', 'assets/audio/C400004FjJo32TISsY.mp3', 'assets/audio/lost.mp3'];
     audio.src = songs[0];   // songs[index]
     audio.autoplay = true;
 
@@ -103,7 +103,7 @@
     }, false);
     audio.addEventListener('ended', function () {
         index += 1;
-        audio.src = songs[(index % 3)];
+        audio.src = songs[(index % 4)];
     })
 
     var colors = ['red', 'orange', 'cyan']; // , 'purple' 'blue', 'green', 
