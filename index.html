@@ -71,7 +71,6 @@
 </html>
 <script src="js/swiper.animate.min.js"></script>
 <script src="js/swiper.min.js"></script>
-<script src="js/wxapi.js"></script>
 <script>
     var numshow = document.querySelector('.number');
     var mySwiper = new Swiper('.home', {
@@ -93,8 +92,18 @@
     var songs = ['assets/audio/happy.mp3','assets/audio/C400001N8e5Q4Gjxda.mp3', 'assets/audio/lost.mp3'];
     audio.src = songs[0];   // songs[index]
     audio.autoplay = true;
+    var sharedata = {
+        link:"https://allinyou.github.io/li",
+        desc:"生日快乐",
+        title:"华 & 丽"
+    }
     document.addEventListener("WeixinJSBridgeReady", function () {
         audio.play();
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+        WeixinJSBridge.invoke('sendAppMessage',sharedata, function(res) {
+            WeixinJSBridge.log(res.err_msg);
+         });
+     });
     }, false);
     document.addEventListener('YixinJSBridgeReady', function() {
         audio.play();
