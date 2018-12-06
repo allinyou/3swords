@@ -170,3 +170,20 @@
 .page-9 .filter {
   background-image: url(../assets/16.jpg);
 }
+
+.loading-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.loading-box canvas {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 200px auto 0;
+}
