@@ -48,7 +48,7 @@ window.onload = function(){
         writeText(n);
         writeBlue(n)
         if(n < 100){
-            n= n+0.4;
+            n= n+0.6;
             requestAnimationFrame(DreamLoading);
         }else {
             var loadingbox = document.querySelector('.loading-box');
