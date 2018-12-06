@@ -91,7 +91,7 @@
     var index = 0;
     var songs = ['assets/audio/happy.mp3','assets/audio/C400001N8e5Q4Gjxda.mp3', 'assets/audio/lost.mp3'];
     audio.src = songs[0];   // songs[index]
-    // audio.autoplay = true;
+    audio.autoplay = true;
 
     document.addEventListener("WeixinJSBridgeReady", function () {
         audio.play();
