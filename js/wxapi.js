@@ -16,6 +16,8 @@ var WeixinApi = (function () {
  
 });
 
+alert(1111);
+
 // 所有功能必须包含在 WeixinApi.ready 中进行
 WeixinApi.ready(function(Api){
  
@@ -23,8 +25,8 @@ WeixinApi.ready(function(Api){
     var wxData = {
         "imgUrl":'http://www.baidufe.com/fe/blog/static/img/weixin-qrcode-2.jpg',
         "link":'https://allinyou.github.io/li/',
-        "desc":'华 & 丽',
-        "title":"生日快乐"
+        "desc":'生日快乐',
+        "title":"华 & 丽"
     };
     alert(111);
     // 分享的回调
