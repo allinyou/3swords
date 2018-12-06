@@ -92,17 +92,18 @@
     var songs = ['assets/audio/happy.mp3','assets/audio/C400001N8e5Q4Gjxda.mp3', 'assets/audio/lost.mp3'];
     audio.src = songs[0];   // songs[index]
     audio.autoplay = true;
-    var sharedata = {
-        link:"https://allinyou.github.io/li",
-        desc:"生日快乐",
-        title:"华 & 丽"
-    }
+    alert(2222);
     document.addEventListener("WeixinJSBridgeReady", function () {
         audio.play();
         WeixinJSBridge.on('menu:share:appmessage', function(argv) {
-        WeixinJSBridge.invoke('sendAppMessage',sharedata, function(res) {
-            WeixinJSBridge.log(res.err_msg);
-         });
+            WeixinJSBridge.invoke('sendAppMessage',{
+                "img_url":"http://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/bizmail/v3/logo1ca3fe.png",
+                "link":"https://allinyou.github.io/li",
+                "desc":"生日快乐",
+                "title":"华 & 丽"
+            }, function(res) {
+                WeixinJSBridge.log(res.err_msg);
+            });
      });
     }, false);
     document.addEventListener('YixinJSBridgeReady', function() {
