@@ -102,7 +102,7 @@
 // 第1页---------------------------------------------------------------------------------------------------------------------------
 .page-1{
   .filter{
-    background-image: url('https://6d61-magic-d13079-1255581239.tcb.qcloud.la/u=203448592,3993075874&fm=214&gp=0.jpg?sign=8aa025fe65def043c6a4a7ff7ccb27eb&t=1543980740');
+    background-image: url(../assets/14.jpg);
     background-position: 20% 70%;
     background-size: 200%;
   }
@@ -134,21 +134,21 @@
 // 第3页---------------------------------------------------------------------------------------------------------------------------
 .page-3{
   .filter{
-    background-image: url(../assets/4.jpg);
+    background-image: url(../assets/7.jpg);
   }
 }
 
 // 第4页---------------------------------------------------------------------------------------------------------------------------
 .page-4{
   .filter{
-    background-image: url(../assets/5.jpg);
+    background-image: url(../assets/8.jpg);
   }
 }
 
 // 第5页---------------------------------------------------------------------------------------------------------------------------
 .page-5{
   .filter{
-    background-image: url(../assets/6.jpg); 
+    background-image: url(../assets/9.jpg); 
   }
   
 }
@@ -163,7 +163,7 @@
 // 第7页---------------------------------------------------------------------------------------------------------------------------
 .page-7{
   .filter{
-    background-image: url(../assets/12.jpg);
+    background-image: url(../assets/14.jpg);
   }
   img:nth-of-type(2){
     margin:20px 0;
@@ -172,14 +172,14 @@
 // 第8页---------------------------------------------------------------------------------------------------------------------------
 .page-8{
   .filter{
-    background-image: url(../assets/14.jpg);
+    background-image: url(../assets/12.jpg);
   }
 }
 
 // 第9页---------------------------------------------------------------------------------------------------------------------------
 .page-9{
   .filter{
-    background-image: url(../assets/16.jpg);
+    background-image: url(../assets/13.jpg);
   }
 }
 
@@ -191,12 +191,51 @@
   bottom:0;
   background-color: #fff;
   z-index: 9999;
-  canvas{
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin:200px auto 0;
+  @extend .vh-center;
+  img{
+    width: 40%;
   }
 }
 
+.music-btn{
+  position: fixed;
+  right:25px;
+  top:20px;
+  border-radius: 50%;
+  width: 0.6rem;
+  height:0.6rem;
+  background-color: rgba(0, 0, 0,0.6);
+  @extend .vh-center;
+  animation-fill-mode:forwards;
+  img{
+    width: 0.36rem;
+  }
+  .pause-sign{
+    display:none;
+    position: absolute;
+    width: 1px;
+    height: 0.6rem;
+    left:50%;
+    top:0;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+}
+
+.rotates{
+  animation-name:rotates;
+  animation-duration:2s;
+  animation-timing-function:linear;
+  animation-delay:0;
+  animation-iteration-count:infinite;
+}
+
+@keyframes rotates {
+  0%{
+    transform: rotate(0)
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 
