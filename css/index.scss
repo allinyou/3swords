@@ -191,9 +191,10 @@
   bottom:0;
   background-color: #fff;
   z-index: 9999;
-  @extend .column-center;
+  @extend .column-align-center;
   img{
     width: 30%;
+    margin-top:45%;
   }
   span{
     color:#f57c23;
