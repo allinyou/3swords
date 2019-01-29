@@ -8,7 +8,7 @@
   justify-content: center;
 }
 
-.vh-center, .loading-box, .music-btn {
+.vh-center, .music-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +36,7 @@
   align-items: center;
 }
 
-.column-center, .page {
+.column-center, .page, .loading-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,7 +170,12 @@
 }
 
 .loading-box img {
-  width: 40%;
+  width: 30%;
+}
+
+.loading-box span {
+  color: #f57c23;
+  margin-top: 5px;
 }
 
 .music-btn {

@@ -191,9 +191,13 @@
   bottom:0;
   background-color: #fff;
   z-index: 9999;
-  @extend .vh-center;
+  @extend .column-center;
   img{
-    width: 40%;
+    width: 30%;
+  }
+  span{
+    color:#f57c23;
+    margin-top:5px;
   }
 }
 
