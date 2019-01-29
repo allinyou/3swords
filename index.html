@@ -98,7 +98,7 @@
     //音频
     var audio = new Audio();
     var musicState = true;
-    var index = Math.floor(Math.random() * 4);
+    var index = Math.floor(Math.random() * 3);
     var songs = ['assets/audio/Friendships.mp3', 'assets/audio/C400004FjJo32TISsY.mp3', 'assets/audio/lost.mp3'];
     audio.src = songs[index];   // songs[index]
     audio.autoplay = true;
@@ -110,7 +110,7 @@
     }, false);
     audio.addEventListener('ended', function () {
         index += 1;
-        audio.src = songs[(index % 4)];
+        audio.src = songs[(index % 3)];
     })
 
     $('.music-btn').click(function(){
