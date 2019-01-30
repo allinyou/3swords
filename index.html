@@ -29,12 +29,7 @@
                 <img class="ani" src="./assets/3.jpg" alt="" swiper-animate-effect="bounceInUp">
                 <!-- <span class="bir-time ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.5s">华 · 农历2018年11月04日</span> -->
             </div>
-            <!-- <div class="page-2 page swiper-slide">
-                <div class="filter"></div>
-                <img class="ani" src="./assets/4.jpg" alt="" swiper-animate-effect="bounceInLeft">
-                <img class="ani" src="./assets/5.jpg" alt="" swiper-animate-effect="bounceInRight">
-                <img class="ani" src="./assets/6.jpg" alt="" swiper-animate-effect="bounceInLeft">
-            </div> -->
+            
             <div class="page-3 page swiper-slide">
                 <div class="filter"></div>
                 <img class="ani" src="./assets/7.jpg" alt="" swiper-animate-effect="zoomIn">
@@ -61,13 +56,18 @@
                 <div class="filter"></div>
                 <img class="ani" src="./assets/12.jpg" alt="" swiper-animate-effect="flipInX">
             </div>
+            <div class="page-2 page swiper-slide">
+                <div class="filter"></div>
+                <img class="ani" src="./assets/15.jpg" alt="" swiper-animate-effect="bounceInLeft">
+            </div>
             <div class="page-9 page swiper-slide">
                 <div class="filter"></div>
                 <img class="ani" src="./assets/13.jpg" alt="" swiper-animate-effect="flipInY">
             </div>
+            
         </div>
     </div>
-    <div class="number fadeInRight animated">1/8</div>
+    <div class="number fadeInRight animated">1/9</div>
     <canvas id="canvas1" height="520" width="300"></canvas>
     <canvas id="canvas2" height="520" width="300"></canvas>
     <div class="music-btn">
@@ -92,7 +92,7 @@
         },
         onSlideChangeEnd: function (swiper) {
             swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-            numshow.innerHTML = (swiper.activeIndex + 1) * 1 + '/8';
+            numshow.innerHTML = (swiper.activeIndex + 1) * 1 + '/9';
         }
     })
 
